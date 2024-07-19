@@ -47,7 +47,7 @@
             // 
             this.groupBox1.Controls.Add(this.Precio_vista);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 28);
+            this.groupBox1.Location = new System.Drawing.Point(12, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 0;
@@ -75,7 +75,7 @@
             // 
             // Placa
             // 
-            this.Placa.Location = new System.Drawing.Point(340, 82);
+            this.Placa.Location = new System.Drawing.Point(358, 148);
             this.Placa.Name = "Placa";
             this.Placa.Size = new System.Drawing.Size(118, 20);
             this.Placa.TabIndex = 1;
@@ -84,15 +84,15 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.25F);
-            this.label2.Location = new System.Drawing.Point(282, 28);
+            this.label2.Location = new System.Drawing.Point(300, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(265, 38);
+            this.label2.Size = new System.Drawing.Size(237, 33);
             this.label2.TabIndex = 2;
             this.label2.Text = "Número de placa";
             // 
             // Registrar
             // 
-            this.Registrar.Location = new System.Drawing.Point(356, 125);
+            this.Registrar.Location = new System.Drawing.Point(374, 191);
             this.Registrar.Name = "Registrar";
             this.Registrar.Size = new System.Drawing.Size(75, 23);
             this.Registrar.TabIndex = 3;
@@ -103,7 +103,7 @@
             // Placa_text_1
             // 
             this.Placa_text_1.AutoSize = true;
-            this.Placa_text_1.Location = new System.Drawing.Point(302, 166);
+            this.Placa_text_1.Location = new System.Drawing.Point(320, 232);
             this.Placa_text_1.Name = "Placa_text_1";
             this.Placa_text_1.Size = new System.Drawing.Size(86, 13);
             this.Placa_text_1.TabIndex = 4;
@@ -113,7 +113,7 @@
             // Placa_text_2
             // 
             this.Placa_text_2.AutoSize = true;
-            this.Placa_text_2.Location = new System.Drawing.Point(394, 166);
+            this.Placa_text_2.Location = new System.Drawing.Point(412, 232);
             this.Placa_text_2.Name = "Placa_text_2";
             this.Placa_text_2.Size = new System.Drawing.Size(88, 13);
             this.Placa_text_2.TabIndex = 5;
@@ -122,7 +122,7 @@
             // 
             // Placas_registradas
             // 
-            this.Placas_registradas.Location = new System.Drawing.Point(661, 41);
+            this.Placas_registradas.Location = new System.Drawing.Point(673, 94);
             this.Placas_registradas.Name = "Placas_registradas";
             this.Placas_registradas.Size = new System.Drawing.Size(75, 23);
             this.Placas_registradas.TabIndex = 6;
@@ -133,7 +133,7 @@
             // 
             // Cerrar
             // 
-            this.Cerrar.Location = new System.Drawing.Point(661, 186);
+            this.Cerrar.Location = new System.Drawing.Point(673, 239);
             this.Cerrar.Name = "Cerrar";
             this.Cerrar.Size = new System.Drawing.Size(75, 23);
             this.Cerrar.TabIndex = 7;
@@ -143,7 +143,7 @@
             // 
             // Mostrar_ticket
             // 
-            this.Mostrar_ticket.Location = new System.Drawing.Point(657, 94);
+            this.Mostrar_ticket.Location = new System.Drawing.Point(669, 147);
             this.Mostrar_ticket.Name = "Mostrar_ticket";
             this.Mostrar_ticket.Size = new System.Drawing.Size(84, 51);
             this.Mostrar_ticket.TabIndex = 8;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 221);
+            this.ClientSize = new System.Drawing.Size(827, 320);
             this.ControlBox = false;
             this.Controls.Add(this.Mostrar_ticket);
             this.Controls.Add(this.Cerrar);

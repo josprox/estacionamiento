@@ -8,14 +8,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace estacionamiento
 {
-    public partial class Estacionamiento : Form
+    public partial class Estacionamiento : MaterialForm
     {
         public Estacionamiento()
         {
             InitializeComponent();
+            MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT; // Tema claro
+            materialSkinManager.ColorScheme = new ColorScheme(
+                Primary.BlueGrey800, // Color primario
+                Primary.BlueGrey900, // Color oscuro primario
+                Primary.BlueGrey500, // Color de acento
+                Accent.LightBlue200, // Color de acento claro
+                TextShade.WHITE
+            );
         }
 
         private void Estacionamiento_Load(object sender, EventArgs e)
