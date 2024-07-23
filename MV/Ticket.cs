@@ -62,6 +62,11 @@ namespace estacionamiento
             if(desarrollador != true)
             {
                 total_pagar = int.Parse(total_redondeado);
+                if(total_pagar == 0)
+                {
+                    MessageBox.Show("Aún tiene tiempo para salir de manera gratuita");
+                    Close();
+                }
             }else { 
                 total_pagar = 1000; 
             }
@@ -74,27 +79,58 @@ namespace estacionamiento
 
         private void Pagar_Click_1(object sender, EventArgs e)
         {
-            Random random = new Random();
-            int numeroaleatorio;
-
-            do
-            {
+            if (desarrollador == true) {
+                Random random = new Random();
+                int numeroaleatorio;
+                Entrada.Enabled = false;
                 do
                 {
-                    numeroaleatorio = random.Next(1, 201);
-                } while (!valores_especificos.Contains(numeroaleatorio)); // Repite si el número no está en valores_especificos
+                    do
+                    {
+                        numeroaleatorio = random.Next(1, 201);
+                    } while (!valores_especificos.Contains(numeroaleatorio)); // Repite si el número no está en valores_especificos
 
-                if (total_pagar >= numeroaleatorio)
-                {
-                    MessageBox.Show($"Total a pagar: {total_pagar}, Se ha insertado: {numeroaleatorio} pesos");
-                    total_pagar -= numeroaleatorio; // Resta numeroaleatorio al total_pagar
-                    MessageBox.Show($"Falta pagar: {total_pagar}");
-                    Pago_texto.Text = total_pagar.ToString();
+                    if (total_pagar >= numeroaleatorio)
+                    {
+                        MessageBox.Show($"Total a pagar: {total_pagar}, Se ha insertado: {numeroaleatorio} pesos");
+                        total_pagar -= numeroaleatorio; // Resta numeroaleatorio al total_pagar
+                        MessageBox.Show($"Falta pagar: {total_pagar}");
+                        Pago_texto.Text = total_pagar.ToString();
+                    }
+                } while (total_pagar > 0); // Continúa mientras haya saldo pendiente
+                Pago_texto.Text = "Saldo liquidado.";
+                Hora_texto.Text = "Hora(s) liquidado(s).";
+                MessageBox.Show("Se ha pagado el total");
+            }
+            else if (desarrollador == false)
+            {
+                int entrada = int.Parse(Entrada.Text);
+                if(total_pagar >= entrada) {
+                    foreach(int valor in valores_especificos)
+                    {
+                        if(valor == entrada)
+                        {
+                            total_pagar = total_pagar - entrada;
+                            MessageBox.Show($"Se ha insertado un billete de ${entrada}pesos , faltan ${total_pagar} pesos");
+                            if(total_pagar == 0)
+                            {
+                                Pago_texto.Text = "Saldo liquidado.";
+                                Hora_texto.Text = "Hora(s) liquidado(s).";
+                                MessageBox.Show("Se ha pagado el total");
+                            }
+                            break;
+                        }
+                        else if (valor != entrada)
+                        {
+                            MessageBox.Show("Detectando valor, presione 'ok' para continuar... Si no recibe respuesta, lo mas probable es que no está metiendo una cantidad correcta");
+                        }
+                    }
                 }
-            } while (total_pagar > 0); // Continúa mientras haya saldo pendiente
-            Pago_texto.Text = "Saldo liquidado.";
-            Hora_texto.Text = "Hora(s) liquidado(s).";
-            MessageBox.Show("Se ha pagado el total");
+                else
+                {
+                    MessageBox.Show($"El valor entrante es mayor a la cantidad del total a pagar (${total_pagar}).");
+                }
+            }
         }
 
         private void Pruebas_Click_1(object sender, EventArgs e)
