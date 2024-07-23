@@ -43,6 +43,8 @@
             this.Num_placa_text = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -51,22 +53,20 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Entrada = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // Creditos
             // 
-            this.Creditos.Location = new System.Drawing.Point(522, 425);
+            this.Creditos.Location = new System.Drawing.Point(571, 429);
             this.Creditos.Name = "Creditos";
             this.Creditos.Size = new System.Drawing.Size(100, 20);
             this.Creditos.TabIndex = 12;
@@ -75,7 +75,7 @@
             // 
             // Pruebas
             // 
-            this.Pruebas.Location = new System.Drawing.Point(547, 72);
+            this.Pruebas.Location = new System.Drawing.Point(596, 76);
             this.Pruebas.Name = "Pruebas";
             this.Pruebas.Size = new System.Drawing.Size(75, 54);
             this.Pruebas.TabIndex = 24;
@@ -98,9 +98,9 @@
             // 
             this.Pago_texto.AutoSize = true;
             this.Pago_texto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
-            this.Pago_texto.Location = new System.Drawing.Point(198, 319);
+            this.Pago_texto.Location = new System.Drawing.Point(149, 317);
             this.Pago_texto.Name = "Pago_texto";
-            this.Pago_texto.Size = new System.Drawing.Size(47, 20);
+            this.Pago_texto.Size = new System.Drawing.Size(54, 24);
             this.Pago_texto.TabIndex = 22;
             this.Pago_texto.Text = "Pago";
             // 
@@ -108,9 +108,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
-            this.label6.Location = new System.Drawing.Point(73, 319);
+            this.label6.Location = new System.Drawing.Point(24, 317);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 20);
+            this.label6.Size = new System.Drawing.Size(119, 24);
             this.label6.TabIndex = 21;
             this.label6.Text = "Total a pagar";
             // 
@@ -118,9 +118,9 @@
             // 
             this.Hora_texto.AutoSize = true;
             this.Hora_texto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
-            this.Hora_texto.Location = new System.Drawing.Point(183, 276);
+            this.Hora_texto.Location = new System.Drawing.Point(105, 274);
             this.Hora_texto.Name = "Hora_texto";
-            this.Hora_texto.Size = new System.Drawing.Size(67, 20);
+            this.Hora_texto.Size = new System.Drawing.Size(72, 24);
             this.Hora_texto.TabIndex = 20;
             this.Hora_texto.Text = "Hora(s)";
             // 
@@ -128,9 +128,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
-            this.label5.Location = new System.Drawing.Point(102, 276);
+            this.label5.Location = new System.Drawing.Point(24, 274);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 20);
+            this.label5.Size = new System.Drawing.Size(77, 24);
             this.label5.TabIndex = 19;
             this.label5.Text = "Hora(s):";
             // 
@@ -140,7 +140,7 @@
             this.Salida_texto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.2F);
             this.Salida_texto.Location = new System.Drawing.Point(199, 233);
             this.Salida_texto.Name = "Salida_texto";
-            this.Salida_texto.Size = new System.Drawing.Size(82, 13);
+            this.Salida_texto.Size = new System.Drawing.Size(104, 16);
             this.Salida_texto.TabIndex = 18;
             this.Salida_texto.Text = "Fecha de salida";
             // 
@@ -150,7 +150,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
             this.label4.Location = new System.Drawing.Point(24, 227);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 20);
+            this.label4.Size = new System.Drawing.Size(154, 24);
             this.label4.TabIndex = 17;
             this.label4.Text = "Fecha de salida: ";
             // 
@@ -160,7 +160,7 @@
             this.Entrada_texto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.2F);
             this.Entrada_texto.Location = new System.Drawing.Point(199, 173);
             this.Entrada_texto.Name = "Entrada_texto";
-            this.Entrada_texto.Size = new System.Drawing.Size(91, 13);
+            this.Entrada_texto.Size = new System.Drawing.Size(113, 16);
             this.Entrada_texto.TabIndex = 16;
             this.Entrada_texto.Text = "Fecha de entrada";
             // 
@@ -170,7 +170,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
             this.label2.Location = new System.Drawing.Point(24, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 20);
+            this.label2.Size = new System.Drawing.Size(169, 24);
             this.label2.TabIndex = 15;
             this.label2.Text = "Fecha de entrada: ";
             // 
@@ -180,7 +180,7 @@
             this.Num_placa_text.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
             this.Num_placa_text.Location = new System.Drawing.Point(123, 106);
             this.Num_placa_text.Name = "Num_placa_text";
-            this.Num_placa_text.Size = new System.Drawing.Size(51, 20);
+            this.Num_placa_text.Size = new System.Drawing.Size(56, 24);
             this.Num_placa_text.TabIndex = 14;
             this.Num_placa_text.Text = "Placa";
             // 
@@ -190,7 +190,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.2F);
             this.label1.Location = new System.Drawing.Point(42, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.Size = new System.Drawing.Size(75, 24);
             this.label1.TabIndex = 13;
             this.label1.Text = "Placas: ";
             // 
@@ -204,12 +204,32 @@
             this.groupBox1.Controls.Add(this.pictureBox3);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(338, 137);
+            this.groupBox1.Location = new System.Drawing.Point(376, 137);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(284, 282);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Esta maquina acepta";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(143, 205);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(133, 70);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 33;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(207, 20);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(52, 51);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 32;
+            this.pictureBox7.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -287,31 +307,11 @@
             this.label3.TabIndex = 27;
             this.label3.Text = "Ingrese sus billetes";
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(207, 20);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(52, 51);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 32;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(143, 205);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(133, 70);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 33;
-            this.pictureBox8.TabStop = false;
-            // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 457);
+            this.ClientSize = new System.Drawing.Size(683, 457);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Entrada);
             this.Controls.Add(this.groupBox1);
@@ -333,14 +333,14 @@
             this.Text = "Ticket";
             this.Load += new System.EventHandler(this.Ticket_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

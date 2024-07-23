@@ -65,15 +65,19 @@ namespace estacionamiento
                 if(total_pagar == 0)
                 {
                     MessageBox.Show("Aún tiene tiempo para salir de manera gratuita");
-                    Close();
+                    Pagar.Enabled = false;
+                    Entrada.Enabled = false;
+                    Pago_texto.Text = "Saldo liquidado.";
+                    Hora_texto.Text = "Hora(s) liquidado(s).";
                 }
             }else { 
                 total_pagar = 1000; 
             }
             Creditos.TextChanged += (s, EventArgs) =>
             {
-                bool desarrollador = VerificarTexto(Creditos, "developer", "Modo de prueba activado");
+                bool desarrollador = VerificarTexto(Creditos, "developer", "Modo de prueba activado, da clic en el botón 'Modo desarrollador'");
                 Pruebas.Visible = desarrollador;
+                Entrada.Enabled = !desarrollador;
             };
         }
 
@@ -82,7 +86,6 @@ namespace estacionamiento
             if (desarrollador == true) {
                 Random random = new Random();
                 int numeroaleatorio;
-                Entrada.Enabled = false;
                 do
                 {
                     do
@@ -140,6 +143,7 @@ namespace estacionamiento
             MessageBox.Show($"Se ha activado el modo desarrollador, total a pagar = {total_pagar}, ya puede iniciar las pruebas");
             Pago_texto.Text = total_pagar.ToString();
             Hora_texto.Text = 50.ToString();
+            Pagar.Enabled = true;
         }
     }
 }
